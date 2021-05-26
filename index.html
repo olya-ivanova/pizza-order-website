@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find Your Pizza</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Website to order for pizza online" />
+    <meta name="author" content="Olga Ivanova" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="pizza_header_pic.png"
+        alt="Pizza's picture"
+        width="150"
+        height="80"
+      />
+      <h1 id="header-title">FindYourPizza</h1>
+      <!-- <p>Language??</p> -->
+    </div>
+    <div class="navbar">
+      <div>
+        <a href="index.html">Home</a>
+        <a href="#">Contacts</a>
+        <a href="#">About</a>
+      </div>
+      <div class="dropdown">
+        <a id="cart-link" href="#"
+          ><i
+            class="fa fa-shopping-cart"
+            style="font-size: 22px; color: white"
+          ></i>
+          Cart: <span id="cart-number"></span>
+        </a>
+        <div class="dropdown-content hidden">
+          <div class="flex-container">
+            <p id="total-p">Total: $<span id="total"></span></p>
+            <button id="close-button" href="#">x</button>
+          </div>
+          <div class="flex-container">
+            <a id="myBtn" class="dropdown-button order" href="#">Order</a>
+            <a id="cancel" class="dropdown-button">Cancel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="made-order-line hidden">
+      <p class="order-p order-made-line"><b>You have made an order!</b></p>
+    </div>
+    <!-- modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="order-main">
+          <p class="order-p">Final cost: <span id="final-cost"></span></p>
+          <p class="order-p">Delivery address:</p>
+          <input type="text" placeholder="Delivery address here..." required />
+          <p class="order-p">Delivery date and time: <span id="date"></span></p>
+          <input class="submit-button" type="submit" value="Submit" />
+        </div>
+      </div>
+    </div>
+    <!-- карусель -->
+    <div class="main">
+      <div class="flex-container">
+        <div class="pizza-item">
+          <img
+            class="main-img"
+            src="pizza_main.png"
+            alt="Pizza's picture"
+            width="200"
+            height="200"
+          />
+          <h3>CARBONARA</h3>
+          <p class="main-pizza-description">
+            Onion, Bacon, Fresh Cream, Ham, Champignon, Mozzarella cheese
+          </p>
+          <p class="price">Price: $<span class="price-amount">10.25</span></p>
+          <button class="main-cart-button">Add to cart</button>
+        </div>
+        <div class="pizza-item">
+          <img
+            class="main-img"
+            src="pizza_main.png"
+            alt="Pizza's picture"
+            width="200"
+            height="200"
+          />
+          <h3>SPICY</h3>
+          <p class="main-pizza-description">
+            Pepperoni, Jalapeno, Mozzarella cheese, Tomato Sauce, Bacon,
+            Tomatoes
+          </p>
+          <p class="price">Price: $<span class="price-amount">12</span></p>
+          <button class="main-cart-button">Add to cart</button>
+        </div>
+        <div class="pizza-item">
+          <img
+            class="main-img"
+            src="pizza_main.png"
+            alt="Pizza's picture"
+            width="200"
+            height="200"
+          />
+          <h3>CHICKEN CURRY</h3>
+          <p class="main-pizza-description">
+            Curry sauce, Ham, Mozzarella cheese, Chicken, Pineapple, Munich
+            sausages
+          </p>
+          <p class="price">Price: $<span class="price-amount">9</span></p>
+          <button class="main-cart-button">Add to cart</button>
+        </div>
+        <div class="pizza-item">
+          <img
+            class="main-img"
+            src="pizza_main.png"
+            alt="Pizza's picture"
+            width="200"
+            height="200"
+          />
+          <h3>BAVARIAN</h3>
+          <p class="main-pizza-description">
+            Mozzarella cheese, Barbecue sauce, Jalapeno, Parmesan, Bavarian
+            sausages
+          </p>
+          <p class="price">Price: $<span class="price-amount">8.50</span></p>
+          <button class="main-cart-button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright © 2021 FindYourPizza, Inc. - All Rights Reserved.</p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
